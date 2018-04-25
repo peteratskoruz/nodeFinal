@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="header page-header">
+        <button class="btn btn-info">Add New Blog</button>
+    </div>
+    <div class="blog-list">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="row">
+                <% blogs.forEach(function(blog){ %>
+                    <div class="col-sm-4">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <h5>
+                                    <%= blog.title %>
+                                </h5>
+                            </div>
+                            <div class="panel-footer">
+                                <p>By: Abhiraj Singh</p>
+                                <p>At: 2017-12-30</p>
+                            </div>
+                        </div>
+                    </div>
+                <%});%>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+<script src="/scripts/jquery.js"></script>
+</body>
+</html>
